@@ -1,7 +1,6 @@
 package Exceptions;
 
 import java.util.Scanner;
-import java.util.InputMismatchException;
 
 public class Main {
 
@@ -34,19 +33,19 @@ public class Main {
 				
 				System.out.println("Il risultato della division è: " + divisionResult);
 
-			} catch (ArithmeticException | InputMismatchException e) {
+			} catch (ArithmeticException | NumberFormatException e) {
 				System.out.println("Eccezione specifica di tipo: " + e.getClass().getName() + " attivata.");
 
 				if (e instanceof ArithmeticException) {
 					System.out.println("Espressione aritmetica fallita.");
 				} else {
-					System.out.println("Input non valido. Devi inserire un numero intero.");
+					System.out.println("Input non valido. Devi inserire un numero.");
 				}
 			}
 			catch (Exception e) {
 				System.out.println("Eccezione generale: " + e.getMessage());
 			} finally {
-				// System.out.println("Inserici un numero oppure \"q\" per uscire");
+				System.out.println("Operazione completata.");
 			}
 		}
 		System.out.println("Sei uscito dal programma. Arrivederci!");
