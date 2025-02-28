@@ -31,10 +31,10 @@ public class Main {
 					throw new ArithmeticException("Divisione per zero non è consentita.");
 				}
 				
-				System.out.println("Il risultato della division è: " + divisionResult);
+				System.out.println("Il risultato della divisione è: " + divisionResult);
 
 			} catch (ArithmeticException | NumberFormatException e) {
-				System.out.println("Eccezione specifica di tipo: " + e.getClass().getName() + " attivata.");
+				System.out.println("Eccezione di tipo: " + e.getClass().getName() + " lanciata.");
 
 				if (e instanceof ArithmeticException) {
 					System.out.println("Espressione aritmetica fallita.");
@@ -45,7 +45,7 @@ public class Main {
 			catch (Exception e) {
 				System.out.println("Eccezione generale: " + e.getMessage());
 			} finally {
-				System.out.println("Operazione completata.");
+				System.out.println("\n");
 			}
 		}
 		System.out.println("Sei uscito dal programma. Arrivederci!");
